@@ -1,12 +1,19 @@
 package com.akarelov.flyway.dto;
 
-import com.akarelov.flyway.domain.Author;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class NoteDtoRequest {
-    private long id;
+    private Long id;
+    @NotBlank
     private String text;
-    private Author author;
-    private LocalDate date;
+    @NotNull
+    private Long authorId;
 }
