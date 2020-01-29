@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -24,4 +26,7 @@ public class Note {
     private Author author;
     @CreationTimestamp
     private LocalDate date;
+    @UpdateTimestamp
+    @Column(name = "date_of_modified")
+    private LocalDate dateOfModified;
 }
