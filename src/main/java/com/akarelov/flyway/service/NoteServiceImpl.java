@@ -28,8 +28,7 @@ public class NoteServiceImpl implements NoteService {
         Note note = new Note();
         note.setText(dto.getText());
         note.setAuthor(author);
-        noteRepository.save(note);
-        return note;
+        return noteRepository.save(note);
     }
 
     @Override
@@ -51,7 +50,6 @@ public class NoteServiceImpl implements NoteService {
                 .orElseThrow(() -> new UserNotExistsException(ErrorCode.USER_NOT_EXISTS));
         note.setAuthor(author);
         note.setText(dto.getText());
-        noteRepository.save(note);
-        return note;
+        return noteRepository.save(note);
     }
 }

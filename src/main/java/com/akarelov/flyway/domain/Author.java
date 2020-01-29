@@ -3,7 +3,7 @@ package com.akarelov.flyway.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -23,6 +23,6 @@ public class Author {
     private String lastName;
     @Column
     private int age;
-    @CreatedDate
+    @CreationTimestamp
     private LocalDate startDate;
 }

@@ -21,8 +21,7 @@ public class AuthorServiceImpl implements AuthorService {
         author.setAge(dto.getAge());
         author.setFirstName(dto.getFirstName());
         author.setLastName(dto.getLastName());
-        authorRepository.save(author);
-        return author;
+        return authorRepository.save(author);
     }
 
     @Override
@@ -42,7 +41,6 @@ public class AuthorServiceImpl implements AuthorService {
         author.setAge(dto.getAge());
         author.setFirstName(dto.getFirstName());
         author.setLastName(dto.getLastName());
-        authorRepository.save(author);
-        return author;
+        return authorRepository.save(author);
     }
 }

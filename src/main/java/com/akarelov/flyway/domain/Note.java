@@ -3,7 +3,7 @@ package com.akarelov.flyway.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -22,6 +22,6 @@ public class Note {
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
-    @CreatedDate
+    @CreationTimestamp
     private LocalDate date;
 }
