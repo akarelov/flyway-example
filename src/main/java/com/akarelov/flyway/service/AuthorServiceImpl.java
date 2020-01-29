@@ -43,4 +43,9 @@ public class AuthorServiceImpl implements AuthorService {
         author.setLastName(dto.getLastName());
         return authorRepository.save(author);
     }
+
+    @Override
+    public Iterable<Author> getAll() {
+        return authorRepository.findAll();
+    }
 }

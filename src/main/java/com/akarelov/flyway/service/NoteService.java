@@ -11,4 +11,6 @@ public interface NoteService {
     Note deleteNote(long id);
 
     Note updateNote(NoteDtoRequest dto);
+
+    Iterable<Note> getAll();
 }

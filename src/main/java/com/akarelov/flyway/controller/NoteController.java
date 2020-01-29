@@ -32,4 +32,9 @@ public class NoteController {
     public Note updateNote(@RequestBody @Valid NoteDtoRequest dto) {
         return noteService.updateNote(dto);
     }
+
+    @GetMapping
+    public Iterable<Note> getAll() {
+        return noteService.getAll();
+    }
 }

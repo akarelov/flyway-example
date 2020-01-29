@@ -32,4 +32,9 @@ public class AuthorController {
     public Author updateAuthor(@RequestBody @Valid AuthorDtoRequest dto) {
         return authorService.updateAuthor(dto);
     }
+
+    @GetMapping
+    public Iterable<Author> getAll() {
+        return authorService.getAll();
+    }
 }

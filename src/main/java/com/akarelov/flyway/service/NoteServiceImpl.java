@@ -52,4 +52,9 @@ public class NoteServiceImpl implements NoteService {
         note.setText(dto.getText());
         return noteRepository.save(note);
     }
+
+    @Override
+    public Iterable<Note> getAll() {
+        return noteRepository.findAll();
+    }
 }

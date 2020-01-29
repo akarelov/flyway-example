@@ -11,4 +11,6 @@ public interface AuthorService {
     Author deleteAuthor(long id);
 
     Author updateAuthor(AuthorDtoRequest dto);
+
+    Iterable<Author> getAll();
 }
